@@ -208,10 +208,10 @@ double MyModel::log_likelihood() const
 	double logL = -0.5*y.size()*log(2*M_PI)
 					- 0.5*logDeterminant - 0.5*exponent;
 
-	//if(std::isnan(logL) || std::isinf(logL)){
-	
-	//	logL = -1E300;
-	//}
+	if(std::isnan(logL) || std::isinf(logL))
+	{
+		logL = -1E300;
+	}
 	return logL;
 
 

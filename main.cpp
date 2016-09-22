@@ -8,7 +8,7 @@ using namespace DNest4;
 
 int main(int argc, char** argv)
 {
-    Data::get_instance().load("HD207832-RV.txt");
+    Data::get_instance().load("RV.txt");
     DNest4::start<MyModel>(argc, argv);
     return 0;
 }

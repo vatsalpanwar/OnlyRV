@@ -9,6 +9,7 @@ using namespace DNest4;
 int main(int argc, char** argv)
 {
     Data::get_instance().load("RV.txt");
+    Lookup::get_instance().load();
     DNest4::start<MyModel>(argc, argv);
     return 0;
 }
